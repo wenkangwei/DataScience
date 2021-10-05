@@ -1,0 +1,6 @@
+#!/bin/bash
+
+module load courses/cpsc6300
+mkdir -p ~/cpsc6300-001
+IP=$(hostname -I | awk '{print $1}')
+cd ~/cpsc6300-001; jupyter-notebook --ip=$IP --no-browser
